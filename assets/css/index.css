@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+*:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  height: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.esquerda {
+  width: 50%;
+  height: 100%;
+}
+
+.esquerda img {
+  width: 100%;
+  height: 100%;
+}
+
+.direita {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+}
+
+.logo,
+.form {
+  height: 50%;
+}
+
+.direita .logo img {
+  height: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 75%;
+}
+
+.form h1 {
+  font-size: 1.5rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: row;
+  width: 75%;
+}
+
+.input-group .input-box {
+  width: inherit;
+}
+
+.input-group .input-box input {
+  padding: 0.8rem;
+  border: 1px solid #0000001c;
+  width: 100%;
+}
+
+.input-group .input-box input:focus {
+  border: 1px solid #5e17eb;
+}
+
+.button {
+  width: 75%;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button button {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border: 0 none;
+  background-color: transparent;
+}
+
+.button .button-login {
+  background-color: #5e17eb;
+  color: #fff;
+}
+
+.button .button-login:focus,
+.button .button-login:hover {
+  background-color: #4811b4;
+}
+
+.button .button-create {
+  color: #5e17eb;
+}
