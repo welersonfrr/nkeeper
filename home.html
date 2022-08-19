@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/home.css" />
+    <title>Nkeeper | Home</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Meus Recados</h1>
+      </header>
+      <form>
+        <div class="grid-input">
+          <div class="grid-item-1">
+            <input
+              type="text"
+              id="input-descricao"
+              placeholder="Descrição"
+              required
+            />
+          </div>
+          <div class="grid-item-2">
+            <input
+              type="text"
+              id="input-detalhamento"
+              placeholder="Detalhamento"
+              required
+            />
+          </div>
+          <div class="grid-item-3">
+            <input type="button" id="salvar" value="Salvar" />
+          </div>
+        </div>
+      </form>
+      <hr />
+      <div class="container-recados">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Descrição</th>
+              <th scope="col">Detalhamento</th>
+              <th scope="col">Ação</th>
+            </tr>
+          </thead>
+          <tbody id="lista-recados">
+            <tr>
+              <th scope="row">1</th>
+              <td>Teste 1</td>
+              <td>detalhamento teste 1</td>
+              <td>
+                <div class="action-group">
+                  <button class="apagar" id="apagar">Apagar</button>
+                  <button class="editar" id="editar">Editar</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Teste 2</td>
+              <td>detalhamento teste 2</td>
+              <td>
+                <div class="action-group">
+                  <button class="apagar" id="apagar">Apagar</button>
+                  <button class="editar" id="editar">Editar</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Teste 3</td>
+              <td>detalhamento teste 3</td>
+              <td>
+                <div class="action-group">
+                  <button class="apagar" id="apagar">Apagar</button>
+                  <button class="editar" id="editar">Editar</button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+  <script src="./assets/JS/home.js"></script>
+</html>

@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+*:focus {
+  outline: none;
+}
+
+:root {
+  --color-1: #5e17eb;
+  --color-1-focus: #4811b4;
+  --color-2: #ffffff;
+  --color-edit: #20c0ed;
+  --color-delete: #db4c3f;
+  --color-zebra-odd: #0000001c;
+  --color-zebra-even: #fff;
+}
+
+a {
+  text-decoration: none;
+}
