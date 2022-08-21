@@ -82,6 +82,19 @@ form h1 {
   height: auto;
 }
 
+.lembrar {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  font-size: 0.7rem;
+  padding-bottom: 0.4rem;
+}
+
+.lembrar label {
+  padding-left: 0.45rem;
+  color: var(--color-1);
+}
+
 .button {
   width: 100%;
   height: 2.5rem;

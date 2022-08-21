@@ -8,10 +8,20 @@ body {
 }
 
 .container {
-  padding-top: 1rem;
   display: flex;
   flex-direction: column;
   width: 80%;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+h1 {
+  padding-top: 1rem;
 }
 
 .grid-input {
@@ -32,6 +42,11 @@ input {
 #salvar {
   background-color: var(--color-1);
   color: var(--color-2);
+  width: 100%;
+  height: 2rem;
+  border-radius: 0.2rem;
+  padding: 0.3rem;
+  border: none;
 }
 
 #salvar:focus,
@@ -119,4 +134,26 @@ tbody tr:nth-child(even) {
 
 .editar {
   background-color: var(--color-edit);
+}
+
+.menu {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  height: 1.5rem;
+  background-color: var(--color-1);
+  color: var(--color-2);
+  font-size: 0.75rem;
+  padding: 0 0.5rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.logout {
+  cursor: pointer;
+}
+
+.ico {
+  width: 1rem;
+  height: 1rem;
 }
