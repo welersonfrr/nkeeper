@@ -11,8 +11,6 @@ document.getElementById("login-form").addEventListener("submit", (e) => {
   const password = document.getElementById("password").value;
   const keepLogged = document.getElementById("manter").checked;
 
-  console.log(username, password, keepLogged);
-
   const account = checkAccount(username);
 
   if (!account) {

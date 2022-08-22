@@ -5,10 +5,6 @@ document.getElementById("signin-form").addEventListener("submit", (e) => {
   const password = document.getElementById("password").value;
   const repeatPassword = document.getElementById("repeatPassword").value;
 
-  console.log(username);
-  console.log(password);
-  console.log(repeatPassword);
-
   if (password != repeatPassword) {
     alert("Senhas não coincidem ");
     return;
