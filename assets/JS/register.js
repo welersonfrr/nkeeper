@@ -1,5 +1,5 @@
 //Criar conta
-document.getElementById("signin-form").addEventListener("submit", (e) => {
+document.getElementById("register-form").addEventListener("submit", (e) => {
   e.preventDefault();
   const username = document.getElementById("username").value;
   const password = document.getElementById("password").value;

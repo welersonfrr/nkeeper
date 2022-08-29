@@ -121,11 +121,11 @@ form h1 {
   background-color: var(--color-1-focus);
 }
 
-.button .button-signin {
+.button .button-register {
   color: var(--color-1);
 }
 
-.button .button-signin:focus,
-.button .button-signin:hover {
+.button .button-register:focus,
+.button .button-register:hover {
   color: var(--color-1-focus);
 }
