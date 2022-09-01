@@ -29,16 +29,7 @@ function saveData(data) {
   logged.notes.push(data.notes[0]);
   localStorage.setItem(logged.login, JSON.stringify(logged));
 
-  const salvaBox = document.createElement("div");
-  salvaBox.setAttribute("class", "box salva-box");
-  salvaBox.innerText = "Recado salvo!";
-
-  document.body.appendChild(salvaBox);
-
-  setTimeout(() => {
-    document.body.removeChild(salvaBox);
-  }, 4500);
-
+  showSalvaBox();
   return;
 }
 
@@ -49,16 +40,7 @@ function removeNota(index) {
     localStorage.setItem(logged.login, JSON.stringify(logged));
     getNotas();
 
-    const removeBox = document.createElement("div");
-    removeBox.setAttribute("class", "box remove-box");
-    removeBox.innerText = "Recado removido!";
-
-    document.body.appendChild(removeBox);
-
-    setTimeout(() => {
-      document.body.removeChild(removeBox);
-    }, 4500);
-
+    showRemoveBox();
     return;
   }
   return;
@@ -142,6 +124,49 @@ function updateNota(index) {
 
   localStorage.setItem(logged.login, JSON.stringify(logged));
 
+  showEditaBox();
+  getNotas();
+  removeModal();
+  return;
+}
+
+// remove modal
+function removeModal() {
+  document.getElementById("edit-form").innerHTML = "";
+}
+
+// Cria alerta de nota salva
+function showSalvaBox() {
+  const salvaBox = document.createElement("div");
+  salvaBox.setAttribute("class", "box salva-box");
+  salvaBox.innerText = "Recado salvo!";
+
+  document.body.appendChild(salvaBox);
+
+  setTimeout(() => {
+    document.body.removeChild(salvaBox);
+  }, 4500);
+
+  return;
+}
+
+// Cria alerta de nota salva
+function showRemoveBox() {
+  const removeBox = document.createElement("div");
+  removeBox.setAttribute("class", "box remove-box");
+  removeBox.innerText = "Recado removido!";
+
+  document.body.appendChild(removeBox);
+
+  setTimeout(() => {
+    document.body.removeChild(removeBox);
+  }, 4500);
+
+  return;
+}
+
+//
+function showEditaBox() {
   const editaBox = document.createElement("div");
   editaBox.setAttribute("class", "box edita-box");
   editaBox.innerText = "Recado salvo!";
@@ -152,12 +177,5 @@ function updateNota(index) {
     document.body.removeChild(editaBox);
   }, 4500);
 
-  getNotas();
-  removeModal();
   return;
-}
-
-// remove modal
-function removeModal() {
-  document.getElementById("edit-form").innerHTML = "";
 }
