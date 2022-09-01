@@ -51,7 +51,16 @@ function checkAccount(key) {
 }
 
 function loginError() {
-  alert("Verifique usuário e senha");
+  const errorBox = document.createElement("div");
+  errorBox.setAttribute("class", "error-box");
+  errorBox.innerText = "Verifique seu usuário e senha!";
+
+  document.body.appendChild(errorBox);
+
+  setTimeout(() => {
+    document.body.removeChild(errorBox);
+  }, 4500);
+
   return;
 }
 

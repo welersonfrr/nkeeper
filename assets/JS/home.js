@@ -28,7 +28,17 @@ document.getElementById("recados-form").addEventListener("submit", (e) => {
 function saveData(data) {
   logged.notes.push(data.notes[0]);
   localStorage.setItem(logged.login, JSON.stringify(logged));
-  alert("Nota Salva!");
+
+  const salvaBox = document.createElement("div");
+  salvaBox.setAttribute("class", "box salva-box");
+  salvaBox.innerText = "Recado salvo!";
+
+  document.body.appendChild(salvaBox);
+
+  setTimeout(() => {
+    document.body.removeChild(salvaBox);
+  }, 4500);
+
   return;
 }
 
@@ -38,6 +48,17 @@ function removeNota(index) {
     logged.notes.splice(index, 1);
     localStorage.setItem(logged.login, JSON.stringify(logged));
     getNotas();
+
+    const removeBox = document.createElement("div");
+    removeBox.setAttribute("class", "box remove-box");
+    removeBox.innerText = "Recado removido!";
+
+    document.body.appendChild(removeBox);
+
+    setTimeout(() => {
+      document.body.removeChild(removeBox);
+    }, 4500);
+
     return;
   }
   return;
@@ -120,7 +141,16 @@ function updateNota(index) {
   logged.notes[index].detalhamento = detalhamento;
 
   localStorage.setItem(logged.login, JSON.stringify(logged));
-  alert("nota atualizada");
+
+  const editaBox = document.createElement("div");
+  editaBox.setAttribute("class", "box edita-box");
+  editaBox.innerText = "Recado salvo!";
+
+  document.body.appendChild(editaBox);
+
+  setTimeout(() => {
+    document.body.removeChild(editaBox);
+  }, 4500);
 
   getNotas();
   removeModal();

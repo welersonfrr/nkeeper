@@ -129,3 +129,37 @@ form h1 {
 .button .button-register:hover {
   color: var(--color-1-focus);
 }
+
+.error-box {
+  z-index: 2;
+  position: absolute;
+  height: auto;
+  padding: 1.5rem;
+  background-color: #e64848;
+  right: 3rem;
+  bottom: 3rem;
+  color: #fff;
+  animation-name: surgir;
+  animation-duration: 0.5s;
+}
+
+.error-box::after {
+  content: "";
+  width: 100%;
+  height: 0.5rem;
+  background-color: #c21010;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  animation-name: errorBar;
+  animation-duration: 5s;
+}
+
+@keyframes errorBar {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}
