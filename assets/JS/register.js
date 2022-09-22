@@ -9,16 +9,18 @@ document.getElementById("register-form").addEventListener("submit", (e) => {
     alert("Senhas não coincidem ");
     return;
   } else {
-    saveAccount({
-      login: username,
-      password: password,
-      notes: [],
-    });
-    alert("Conta criada com sucesso");
-    window.location.href = "./index.html";
+    localStorage.getItem(username) == null
+      ? saveAccount({
+          login: username,
+          password: password,
+          notes: [],
+        })
+      : alert("Nome de usuário não disponivel!");
   }
 });
 
 function saveAccount(data) {
   localStorage.setItem(data.login, JSON.stringify(data));
+  alert("Conta criada com sucesso");
+  window.location.href = "./index.html";
 }
